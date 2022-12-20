@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const App = ({}) => {
   return (
@@ -9,11 +9,11 @@ const App = ({}) => {
         <Text style={styles.header2}>HELLO, USER</Text>
         <Text style={styles.header3}>Day Streak: xxx days</Text>
       </View>
-      <View style={styles.beginner}>
+      <TouchableOpacity style={styles.advanced}>
         <Text style={styles.contentB1}>Beginner</Text>
         <Text style={styles.contentB2}>Start as a beginner</Text>
         <Text style={styles.contentB3}>START</Text>
-      </View>
+      </TouchableOpacity>
       <View style={styles.advanced}>
         <Text style={styles.contentA1}>Advanced</Text>
         <Text style={styles.contentA2}>Train continuously</Text>

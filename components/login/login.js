@@ -1,7 +1,15 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, StyleSheet, Image } from "react-native";
-
-function LoginPage() {
+import {
+  View,
+  Text,
+  TextInput,
+  Button,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+} from "react-native";
+import { Tosca_Blob } from "../../assets/tosca_elipse.svg";
+const LoginPage = ({ route, navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -13,21 +21,43 @@ function LoginPage() {
   };
   return (
     <View style={styles.container}>
-      <View>
-        <Text style={styles.titleLabel}>
-          START YOUR {"\n"}WORKOUT {"\n"}JOURNEY
-        </Text>
+      <View
+        style={{
+          position: "absolute",
+          justifyContent: "center",
+          alignItems: "center",
+          top: -210,
+          left: 0,
+          right: 0,
+        }}
+      ></View>
+      <View style={styles.startyourjourney}>
+        <Text style={styles.titlelogin}> START YOUR</Text>
+        <Text style={styles.titlelogin}>WORKOUT</Text>
+        <Text style={styles.titlelogin}>JOURNEY</Text>
       </View>
-      <Image
-        source={require("../../assets/Push-up-Login.png")}
-        style={{ width: 120, height: 120 }}
-      />
+      <View style={styles.circle}>
+        <View style={{ marginLeft: 50, marginTop: 50 }}>
+          <Image
+            source={require("../../assets/Push-up-Login.png")}
+            style={{ width: 120, height: 120 }}
+          />
+        </View>
+      </View>
+
       <TextInput
         style={styles.input}
         placeholder="Email Address"
         // style={styles.input}
         value={email}
         onChangeText={(text) => setEmail(text)}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder={"Username"}
+        value={password}
+        onChangeText={(text) => setPassword(text)}
+        secureTextEntry={true}
       />
       {/* <Text style={styles.label}>password</Text> */}
       <TextInput
@@ -37,18 +67,54 @@ function LoginPage() {
         onChangeText={(text) => setPassword(text)}
         secureTextEntry={true}
       />
-      <Button title="Continue" onPress={handleLogin} />
+
+      {/* <Button style={styles.buttonn} title="Continue" onPress={handleLogin} /> */}
+      <TouchableOpacity
+        style={styles.buttonn}
+        onPress={() => navigation.navigate("Home")}
+      >
+        <Text style={{ alignSelf: "center", marginTop: 5, fontSize: 20 }}>
+          Continue
+        </Text>
+      </TouchableOpacity>
       <Text Style={styles.label2}>Don't Have Account?</Text>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
+  buttonn: {
+    backgroundColor: "#82AAE3",
+    width: 220,
+    height: 40,
+    // marginTop: 100,
+    borderRadius: 20,
+  },
+  circle: {
+    width: 220,
+    height: 220,
+    borderRadius: 360,
+    backgroundColor: "#91D8E4",
+    marginBottom: 40,
+  },
+  startyourjourney: {
+    marginTop: 50,
+    textAlign: "center",
+  },
+  titlelogin: {
+    fontSize: 30,
+    fontWeight: "500",
+  },
   container: {
+    marginTop: 40,
     flex: 1,
     alignContent: "center",
     alignItems: "center",
     // justifyContent: "center",
+  },
+  startyourjourney: {
+    marginBottom: 10,
+    marginTop: 25,
   },
   titleLabel: {
     justifyContent: "center",
@@ -58,6 +124,7 @@ const styles = StyleSheet.create({
     marginTop: 60,
     width: 240,
     marginLeft: 130,
+    flexDirection: "row",
   },
   label: {
     fontSize: 16,
@@ -66,9 +133,9 @@ const styles = StyleSheet.create({
   input: {
     width: "60%",
     height: 40,
-    borderColor: "gray",
-    borderWidth: 1,
-    marginBottom: 16,
+    borderColor: "black",
+    borderWidth: 2,
+    marginBottom: 20,
     padding: 8,
   },
   title: {
