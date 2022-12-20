@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, StyleSheet} from "react-native";
-import {image} from "react-native"
-import home from "./components/main/home"
-import login from "./components/login/login"
-import beginner from "./components/beginner/beginner"
-import advanced from "./components/advanced/advanced"
+import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -16,16 +11,8 @@ function LoginPage() {
     // If successful, navigate to the home screen
     // If unsuccessful, show an error message
   };
-
-  const image = () => {
-    return (
-      <image source={require('./Push-up Login.png')} />
-    );
-  };
-
   return (
     <View style={styles.container}>
-
       <Text style={styles.titleLabel}>START YOUR WORKOUT JOURNEY</Text>
 
       <TextInput
@@ -33,15 +20,17 @@ function LoginPage() {
         placeholder="Email Address"
         // style={styles.input}
         value={email}
-        onChangeText={(text) => setEmail(text)} />
+        onChangeText={(text) => setEmail(text)}
+      />
       {/* <Text style={styles.label}>password</Text> */}
       <TextInput
         style={styles.input}
         placeholder={"Password"}
         value={password}
         onChangeText={(text) => setPassword(text)}
-        secureTextEntry={true} />
-        <Button title="Continue" onPress={handleLogin} />
+        secureTextEntry={true}
+      />
+      <Button title="Continue" onPress={handleLogin} />
       <Text Style={styles.label2}>Don't Have Account?</Text>
     </View>
   );
@@ -53,7 +42,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     // justifyContent: "center",
   },
-  titleLabel:{
+  titleLabel: {
     fontSize: 20,
     marginBottom: 50,
     marginTop: 60,
@@ -72,7 +61,7 @@ const styles = StyleSheet.create({
   },
   title: {
     width: "60%",
-    height: 40, 
+    height: 40,
     backgroundColor: "black",
     borderColor: "gray",
     borderWidth: 1,
@@ -82,7 +71,7 @@ const styles = StyleSheet.create({
   label2: {
     marginTop: 40,
     fontSize: 30,
-  }
+  },
 });
 
 export default LoginPage;
