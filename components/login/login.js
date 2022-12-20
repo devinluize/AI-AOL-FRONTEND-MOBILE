@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, StyleSheet } from "react-native";
+import { View, Text, TextInput, Button, StyleSheet, Image } from "react-native";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -13,8 +13,15 @@ function LoginPage() {
   };
   return (
     <View style={styles.container}>
-      <Text style={styles.titleLabel}>START YOUR WORKOUT JOURNEY</Text>
-
+      <View>
+        <Text style={styles.titleLabel}>
+          START YOUR {"\n"}WORKOUT {"\n"}JOURNEY
+        </Text>
+      </View>
+      <Image
+        source={require("../../assets/Push-up-Login.png")}
+        style={{ width: 120, height: 120 }}
+      />
       <TextInput
         style={styles.input}
         placeholder="Email Address"
@@ -39,14 +46,18 @@ function LoginPage() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignContent: "center",
     alignItems: "center",
     // justifyContent: "center",
   },
   titleLabel: {
+    justifyContent: "center",
+    alignSelf: "center",
     fontSize: 20,
     marginBottom: 50,
     marginTop: 60,
     width: 240,
+    marginLeft: 130,
   },
   label: {
     fontSize: 16,
