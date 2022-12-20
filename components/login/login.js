@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginBottom: 50,
     marginTop: 60,
+    width: 240,
   },
   label: {
     fontSize: 16,
