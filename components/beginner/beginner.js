@@ -20,11 +20,23 @@ const App = ({}) => {
           <Text style={{width: 160, justifyContent: "center", marginLeft: 15, fontSize: 12, marginTop: 15}}>If it’s hard to do, we recommend to do Incline Push-Up instead.</Text>
         </View>
       </View>
+      <View style={{borderWidth: 1, borderColor: "black", width: "100%", marginTop: 15}}></View>
       <Image
         source={require("../../assets/pushup.png")}
-        style={{ width: 360, height: 230, marginLeft: 15, marginTop: 40}}
+        style={{ width: 360, height: 230, marginLeft: 15, marginTop: 20}}
       />
-      <Text style>(Example of the camera capture)</Text>
+      <Text style={{textAlign:"center", marginTop: 10}}>(Example of the camera capture)</Text>
+      <View style={{alignItems: "center"}}>
+        <View style={styles.content2}>
+          <Text style={{textAlign: "center"}}>START</Text>
+        </View>
+      </View>
+      <TouchableOpacity style={{alignItems: "center"}}>
+        <View style={styles.content3}>
+          <Text style={{fontSize: 15, marginLeft: 5, marginTop: 5}}>Reminder:</Text>
+          <Text style={{fontSize: 15, marginTop: 5, marginLeft: 5}}>Please allow access to the camera so the application can detect your body.</Text>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -41,6 +53,22 @@ const styles = StyleSheet.create({
   },
   content:{
     flexDirection: "row",
+  },
+  content2:{
+    backgroundColor: "#BFEAF5",
+    justifyContent: "center",
+    width: 100,
+    height: 40,
+    marginTop: 10,
+    borderRadius: 20,
+  },
+  content3:{
+    width: 300,
+    height: 80,
+    borderWidth: 1,
+    borderColor: "black",
+    borderRadius: 10,
+    marginTop: 10
   }
 });
 
