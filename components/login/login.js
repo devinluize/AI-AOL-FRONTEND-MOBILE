@@ -32,8 +32,8 @@ const LoginPage = ({ route, navigation }) => {
       ></View>
       <View style={styles.startyourjourney}>
         <Text style={styles.titlelogin}>START YOUR</Text>
-        <Text style={styles.titlelogin}>WORKOUT</Text>
-        <Text style={styles.titlelogin}>JOURNEY</Text>
+        <Text style={styles.titlelogin}> WORKOUT</Text>
+        <Text style={styles.titlelogin}> JOURNEY</Text>
       </View>
       <View style={styles.circle}>
         <View style={{ marginLeft: 50, marginTop: 50 }}>
