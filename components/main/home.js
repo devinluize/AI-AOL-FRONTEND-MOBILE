@@ -17,6 +17,25 @@ const App = ({}) => {
             style={{ width: 50, height: 50, marginLeft: 300, marginTop: -20 }}
           />
           <Text style={styles.header3}>Day Streak: xxx days</Text>
+          <Text style={styles.header4}>Let’s work out our triceps, pectoral muscles, and shoulder using proper form. Push-up is the fastest and most effective way to build our strength.</Text>
+          <Text style={styles.header5}>WE WILL HELP YOU</Text>
+        </View>
+      </View>
+      <View style={styles.container4}>
+        <View style={styles.leftBeginner}>
+          <Image
+            source={require("../../assets/Left-Beginner.png")}
+            style={{ width: 50, height: 50, marginLeft: 25 }}
+          />
+          <Text style={{textAlign: "center", marginTop: 10}}>Good Form</Text>
+        </View>
+        
+        <View style={styles.rightBeginner}>
+          <Image
+            source={require("../../assets/Right-Beginner.png")}
+            style={{ width: 50, height: 50, marginLeft: 25}}
+          />
+          <Text style={{textAlign: "center", marginTop: 10}}>Count</Text>
         </View>
       </View>
       <TouchableOpacity style={styles.beginner}>
@@ -55,7 +74,7 @@ const styles = StyleSheet.create({
   },
   container2: {
     width: "100%",
-    height: 160,
+    height: 280,
     backgroundColor: "#82AAE3",
   },
   container3: {
@@ -63,6 +82,24 @@ const styles = StyleSheet.create({
     height: 65,
     backgroundColor: "#EAFDFC",
     marginTop: 15,
+  },
+  container4:{
+    flexDirection: "row",
+  },
+  leftBeginner:{
+    width: 100,
+    height: 60,
+    backgroundColor: "#91D8E4",
+    marginTop: -30,
+    borderRadius: 20,
+  },
+  rightBeginner:{
+    width: 100,
+    height: 60,
+    backgroundColor: "#91D8E4",
+    marginLeft: 50,
+    marginTop: -30,
+    borderRadius: 20,
   },
   header: {
     fontSize: 28,
@@ -80,6 +117,19 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     fontFamily: "sans-serif",
     marginTop: -20,
+  },
+  header4:{
+    fontSize: 12, 
+    width: 350,
+    height: 50,
+    marginLeft: 20,
+    marginTop: 30,
+  },
+  header5:{
+    fontSize: 13, 
+    textAlign: "center",
+    marginLeft: -20,
+    marginTop: 10,
   },
   beginner: {
     width: "80%",
@@ -109,9 +159,11 @@ const styles = StyleSheet.create({
   contentA1: {
     fontSize: 36,
     marginTop: 20,
+    marginLeft: 10,
   },
   contentA2: {
     fontSize: 13,
+    marginLeft: 10,
   },
 });
 
