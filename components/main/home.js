@@ -24,10 +24,10 @@ const App = ({}) => {
           <Text style={styles.contentB1}>Beginner</Text>
           <Text style={styles.contentB2}>Start as a beginner</Text>
         </View>
-        <View style={{alignSelf:"center", marginLeft: 50}}>
+        <View style={{ alignSelf: "center", marginLeft: 50 }}>
           <Image
-              source={require("../../assets/beginner.png")}
-              style={{ width: 70, height: 70}}
+            source={require("../../assets/beginner.png")}
+            style={{ width: 70, height: 70 }}
           />
         </View>
       </TouchableOpacity>
@@ -36,13 +36,13 @@ const App = ({}) => {
           <Text style={styles.contentA1}>Advanced</Text>
           <Text style={styles.contentA2}>Train continuously</Text>
         </View>
-        <View style={{alignSelf:"center", marginLeft: 50}}>
+        <View style={{ alignSelf: "center", marginLeft: 50 }}>
           <Image
-                source={require("../../assets/Advanced.png")}
-                style={{ width: 70, height: 70}}
-          /> 
+            source={require("../../assets/Advanced.png")}
+            style={{ width: 70, height: 70 }}
+          />
         </View>
-      </TouchableOpacity >
+      </TouchableOpacity>
     </View>
   );
 };
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     height: 160,
     backgroundColor: "#82AAE3",
   },
-  container3:{
+  container3: {
     width: "100%",
     height: 65,
     backgroundColor: "#EAFDFC",
