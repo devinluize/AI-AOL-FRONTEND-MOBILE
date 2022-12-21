@@ -14,9 +14,9 @@ const App = () => {
           headerShown: false,
         }}
       >
-        {/* <Stack.Screen name="Home" component={Home} /> */}
-        <Stack.Screen name="LoginPage" component={LoginPage} />
+        {/* <Stack.Screen name="BeginnerPage" component={Beginner}/> */}
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="LoginPage" component={LoginPage} />
       </Stack.Navigator>
     </NavigationContainer>
   );

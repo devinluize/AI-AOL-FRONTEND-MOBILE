@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {
   View,
@@ -9,7 +8,6 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
-import { Tosca_Blob } from "../../assets/tosca_elipse.svg";
 const LoginPage = ({ route, navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
